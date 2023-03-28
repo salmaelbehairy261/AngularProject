@@ -1,0 +1,16 @@
+.color{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 50%;
+}
+.btn-block{
+  background-color: #434343;
+  color:#fff;
+}
+
+.btn-block:hover{
+  background-color: #605f5f;
+}

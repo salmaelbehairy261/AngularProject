@@ -1,0 +1,110 @@
+<section class="bestSeller">
+  <div class="container py-5">
+    <h3 class="text-center mb-5 bestSellerTxt text-uppercase"><strong class="p-5">Best Sellers </strong></h3>
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img [src]="products[0].image"
+            class="w-100" />
+          <a routerLink="/Products">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+              <div class="d-flex justify-content-start align-items-start h-100">
+                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$ {{products[0].price}}</span></h5>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img [src]="products[1].image"
+            class="w-100 hover-zoom" />
+          <a routerLink="/Products">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+              <div class="d-flex justify-content-start align-items-start h-100">
+                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$ {{products[1].price}}</span></h5>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img [src]="products[2].image"
+            class="w-100" />
+          <a routerLink="/Products">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+              <div class="d-flex justify-content-start align-items-start h-100">
+                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$ {{products[2].price}}</span></h5>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded ripple-surface">
+          <img [src]="products[3].image"
+            class="w-100" />
+          <a routerLink="/Products">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+              <div class="d-flex justify-content-start align-items-start h-100">
+                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$ {{products[3].price}}</span></h5>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img [src]="products[4].image"
+            class="w-100" />
+          <a routerLink="/Products">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+              <div class="d-flex justify-content-start align-items-start h-100">
+                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$ {{products[4].price}}</span></h5>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img [src]="products[5].image"
+            class="w-100" />
+          <a routerLink="/Products">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+              <div class="d-flex justify-content-start align-items-start h-100">
+                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$ {{products[5].price}}</span></h5>
+              </div>
+            </div>
+            <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

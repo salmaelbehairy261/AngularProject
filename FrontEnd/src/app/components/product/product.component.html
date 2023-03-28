@@ -1,0 +1,53 @@
+<mat-card class="card text-center">
+    <img mat-card-image [src]="product.image">
+    <mat-card-content class="my-3">
+      <h3>{{product.title}}</h3>
+      <p>{{product.description}}</p>
+      <h4>$ {{product.price}}</h4>
+      <div class="rating">
+        <div class="stars" *ngIf="product.rate==0">
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+        </div>
+        <div class="stars" *ngIf="product.rate==1">
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+        </div>
+        <div class="stars" *ngIf="product.rate==2">
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+        </div>
+        <div class="stars" *ngIf="product.rate==3">
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg"></span>
+          <span class="fa fa-star fa-lg"></span>
+        </div>
+        <div class="stars" *ngIf="product.rate==4">
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg"></span>
+        </div>
+        <div class="stars" *ngIf="product.rate==5">
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+          <span class="fa fa-star fa-lg checked"></span>
+        </div>
+      </div>
+    </mat-card-content>
+      <button class=" text-uppercase rounded-0 btn p-3" (click)="dialog(product._id)">View Details</button>
+</mat-card>

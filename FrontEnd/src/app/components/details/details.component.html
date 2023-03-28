@@ -1,0 +1,68 @@
+<div class="card bg-white border-0">
+    <div class="container-fliud">
+      <i class="fa-solid fa-xmark close" (click)="close()"></i>
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img [src]=product.image /></div>
+          </div>
+        </div>
+        <div class="details col-md-6">
+          <h3 class="product-title">{{product.title}}</h3>
+          <div class="rating">
+            <div class="stars" *ngIf="product.rate==0">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="stars" *ngIf="product.rate==1">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="stars" *ngIf="product.rate==2">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="stars" *ngIf="product.rate==3">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="stars" *ngIf="product.rate==4">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="stars" *ngIf="product.rate==5">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
+          </div>
+          <p class="product-description">{{product.description}}</p>
+          <p class="vote">{{product.details}}</p>
+          <h4 class="price">current price: <span>$ {{product.price}}</span></h4>
+          <h5 class="colors">colors:
+            <span class="color" *ngFor="let color of product.colors " [ngStyle]="{'background-color':color}" (click)="selectColor($event,color)"></span>
+          </h5>
+          <div class="action">
+            <button class="add-to-cart btn btn-default" type="button" (click)="addToCart()">add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

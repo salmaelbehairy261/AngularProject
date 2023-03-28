@@ -1,0 +1,51 @@
+<div class="container-fluid m-0 mb-5 p-0 text-center">
+  <div class="filter p-5">
+    <h1 class="title">Products</h1>
+    <div class="my-5">
+      <span (click)="allProducts($event)" class="cat px-2 text-uppercase caTxt">All</span>
+      <span *ngFor="let category of categories" class="cat text-uppercase " (click)="filterCategory($event,category._id)"> | <span class="px-2 caTxt">{{ category.name }}</span>
+      </span>
+    </div>
+
+    <div class="row mb-3 d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+        <div class="form">
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            class="form-control shadow-sm form-input"
+            placeholder="Search anything..."
+            [(ngModel)]="term"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="container mt-5">
+  <div class="d-flex flex-wrap justify-content-center gap-5">
+    <app-product
+      *ngFor="let product of products | filter : term | paginate: {itemsPerPage: 9,currentPage: page,totalItems: (products | filter : term).length};"
+      [product]="product"
+      class="mb-5"
+    ></app-product>
+    <div *ngIf="(products | filter : term).length==0" class="p-5 text-center notFound">
+      <img src="assets/Images/notFound.png" width="300">
+      <h1>No Matching Products Found !</h1>
+      <p>There are no products that match your current filters. Try removing some of them to get better results.</p>
+    </div>
+  </div>
+  <br>
+  <div class="pagination m-0">
+    <pagination
+    [totalItems]="(products | filter : term).length"
+    [(ngModel)]="page"
+    [itemsPerPage]="9"
+    (pageChanged)="onPageDataChange($event)"
+    [boundaryLinks]="true"
+    >
+  </pagination>
+  </div>
+
+</div>

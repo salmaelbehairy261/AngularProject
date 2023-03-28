@@ -1,0 +1,15 @@
+.card{
+  width:370px;
+  box-shadow: -1px 5px 16px -8px rgba(0,0,0,0.41);
+}
+.card:hover{
+  transform: scale(1.02);
+  box-shadow: -1px 5px 16px -5px rgba(0,0,0,0.52);
+}
+.checked {
+  color: #ff9f1a; }
+.btn{
+  color: #434343;
+  font-weight: bold;
+  background-color: #D0D9DD;
+}

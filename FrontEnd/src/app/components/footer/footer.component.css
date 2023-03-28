@@ -1,0 +1,24 @@
+.floatBtn {
+  width: 65px;
+  height: 65px;
+  background-color: #D6999E;
+}
+.floatBtn :hover{
+  color: white;
+}
+a:hover{
+  color: white;
+}
+.cart{
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+}
+footer{
+  background-color: #5B6F7A;
+}
+a{
+  text-decoration: none;
+}
+
+

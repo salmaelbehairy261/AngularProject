@@ -1,0 +1,19 @@
+.ripple{
+  position: relative;
+}
+.mask{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.hover-zoom:hover{
+  transform: scale(1.03);
+}
+.bestSeller{
+  background-color: #eef4f7;
+}
+.bestSellerTxt{
+  color:#D6999E;
+}
